@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Musings - Agents?</title>
+    <style>
+      /* load heading font */
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@700');
+
+      /* load body font */
+      @import url('https://fonts.googleapis.com/css2?family=Noto Sans:wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Noto Sans:ital,wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Noto Sans:wght@700');
+      @import url('https://fonts.googleapis.com/css2?family=Noto Sans:ital,wght@700');
+
+      /* load mono font */
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Mono:wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Mono:ital,wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Mono:wght@700');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Mono:ital,wght@700');
+
+      /* load emoji font */
+      @font-face {
+        font-family: "Noto Color Emoji";
+        src: url('../assets/fonts/emoji/NotoColorEmoji-Regular.ttf');
+        font-weight: 400;
+      }
+  
+      :root {
+        /* colors */
+        --primary: #05b2dc;
+        --secondary: #ef9B0f;
+        --tertiary: #ef3e36;
+        /* shades */
+        --base: #ffffff;
+        --mantle: #f5f4f5;
+        --crust: #d4d2d5;
+        --overlay: #aBaBaE;
+        --footer: #000000cc;
+        /* text */
+        --text: #343233;
+        --hltext: #ffffff;
+        color: var(--text);
+        /* background-specific text */
+        --primary-text: var(--hltext);
+        --secondary-text: var(--hltext);
+        --tertiary-text: var(--hltext);
+        --base-text: var(--text);
+        --mantle-text: var(--text);
+        --crust-text: var(--text);
+        --overlay-text: var(--hltext);
+        --footer-text: var(--hltext);
+        /* fonts */
+        --heading: Poppins, Noto Color Emoji;
+        --body: Noto Sans, Noto Color Emoji;
+        --mono: JetBrains Mono, Noto Color Emoji;
+        font-family: var(--body); 
+      }
+      /* dark mode */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          /* colors */
+          --primary: #05b2dc;
+          --secondary: #ef9B0f;
+          --tertiary: #ef3e36;
+          /* shades */
+          --base: #343233;
+          --mantle: #373536;
+          --crust: #3E3C3D;
+          --overlay: #646461;
+          --footer: #00000022;
+          /* text */
+          --text: #ffffff;
+          --hltext: #343233;
+          color: var(--text);
+          /* background-specific text */
+          --primary-text: var(--text);
+          --secondary-text: var(--text);
+          --tertiary-text: var(--text);
+          --base-text: var(--text);
+          --mantle-text: var(--text);
+          --crust-text: var(--text);
+          --overlay-text: var(--hltext);
+          --footer-text: var(--text);
+        }
+      }
+      /* style settings */
+      header#header {
+        grid-template-columns: 8rem auto 8rem;
+      }
+      body#background {
+        background: fixed center/cover var(--base);
+        
+        
+      }
+      #background-gradient {
+        background: linear-gradient(
+          45deg, 
+          color-mix(in srgb, var(--mantle) 80%, transparent), transparent, color-mix(in srgb, var(--crust) 20%, transparent)
+        );
+      }
+      content#content {
+        padding: 0 3rem;
+        background: color-mix(in srgb, var(--base) 0%, transparent);
+        border-left: none;
+        border-right: none;
+      }
+      #avatar {
+        
+        border-radius: 1rem;
+        
+      }
+      footer#footer a {
+        color: #ef9B0f;
+      }
+      footer#footer a:hover {
+        color: #ef3e36;
+      }
+    </style>
+    <link rel="icon" type="image/x-icon" href=assets/landing-favicon.png>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/responsivity.css" rel="stylesheet">  
+    <script src="../search/main.js"></script>
+    <script src="https://kit.fontawesome.com/b57355f8ac.js" crossorigin="anonymous"></script>
+    <script id="altmetric-embed-js" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/altmetric_badges-e7ba41a192efc3e63f5d48f8a1916dec4b1b49c01075bc7b39481408957b3b28.js"></script>
+    <link id="altmetric-embed-css" rel="stylesheet" type="text/css" href="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed-59614f5c46b49b21eeef3bb28c4fb38d1e7069e8d014752fcb66e84942556802.css">
+    <script>
+      function on_share() {
+        navigator.share({
+          url: document.URL,
+          title: "Musings -Agents?",
+        });
+      }
+    </script>
+</head>
+
+<body id="background">
+  <div id="background-gradient"></div>
+  <content id="content">
+  
+<a id="share-btn" onclick="on_share()">
+  <i class="fa fa-share-alt" alt="🔗"></i>
+</a>
+
+  
+  <header id="article-header">
+    <a href=.. id="return-home">
+        <i class="fa fa-arrow-left" alt="⇦"></i> Home
+    </a>
+    <h1 id="title">Musings</h1>
+</header>
+  
+  <main id="page">
+    <nav class="vertical" id="toc">
+
+<ul>
+
+<li class="nav-item">
+<a href="#quaeratur-vacca">Quaeratur vacca</a>
+    
+    <ul>
+    
+    
+    <li class="nav-subitem">
+    <a href="#ossa-maris-factaque-quotiens">Ossa maris factaque quotiens</a>
+    </li>
+    
+    
+    
+    <li class="nav-subitem">
+    <a href="#candescere-notus-esse-est-possim-gravi">Candescere notus esse est possim gravi</a>
+    </li>
+    
+    
+    </ul>
+    
+</li>
+
+</ul>
+
+</nav>
+    <h1 id="quaeratur-vacca">Quaeratur vacca</h1>
+<h2 id="ossa-maris-factaque-quotiens">Ossa maris factaque quotiens</h2>
+<p>Lorem markdownum auso addidit dum tuis scis medio graves, ipsaque nam, diurnis
+super falsamque parenti inperfecta timidis intresque. Tu illud non dilata
+nurusque nives conferat terras falsa rapuere resonant iuvencae est quoque certe
+et nec tollens. Rapida cupido. Amat <strong>navem petis</strong> luctatusque esset, sic rerum
+puerum <a href="http://www.harenaparentis.net/">meis obliquis equi</a>. Potiora me <a href="http://bracchiacalcavere.com/te.php">ortos
+bisque</a> Nilum caecaque ab longa primum si
+Phoebus sed prosiluit rerum, ora.</p>
+<ul>
+<li>Tuis demisso Sisyphe</li>
+<li>Ritu semine urbe tandem umida</li>
+<li>Atque conferat</li>
+<li>Tunc auctor tamen vertice mihi</li>
+<li>Ut ille nec adstat pectora Iuppiter</li>
+</ul>
+<p>Utraque <a href="http://www.satumque.io/">utque prudentia erat</a> viperei. Portante
+honorem, Euboicus vagi cortice regnum et iugulum telo <em>data uti</em> tumor saepe
+felix. Harenas et primi Asbolus, ante exosus tuum, et restabat <em>mollia</em>, paretur
+<em>ademptae digitis</em> diffundi. Huic strage, super inter hoc, ter cadit dixit
+veniente negarunt.</p>
+<h2 id="candescere-notus-esse-est-possim-gravi">Candescere notus esse est possim gravi</h2>
+<p>Quaerebatque et patulos et vidisse acumine minus. Commoda claro <em>prosit rogato</em>
+labores, est sic, da reddere et silet! Suos quod notissima refert.</p>
+<blockquote>
+<p>Illis fetum fata catenis canoro congelat gurgite habet pectore Aeacide greges
+bracchia. Sic faciem, in genetrix cernimus carbasa sincerumque Subaris
+Amphionis. Tempora pleno formosus arte, <strong>ingentem tegat</strong>, pruinas fleverunt:
+<strong>Liberfemineae</strong> concussit. Quassaque ut quid. Fuit gutturaque utraque pando,
+diu <a href="http://telis.org/horrent-habebatur">huc atris</a> diurnos?</p>
+</blockquote>
+<p>Iaculo modo, <strong>non mortis</strong> tulit ventisque, marmore et dea ope. Dryadas
+Saturnius e loquenti datos novitasque igni consistuntque movere. Sed <a href="http://luctibus.com/protinus">longi
+innumeris iners</a> miserrima pedibusque <em>tellure
+est</em> prensis, eadem sociis virgo et haec relecto et. Vestigia qui <strong>tibi</strong> sola
+at erat oculos quoniam capillos conpescuit edidit corpora frondibus cornibus.</p>
+<p>Tibi procul <strong>gemelliparae micant</strong> feras inclitus Phoebus pectora imitataque
+quin praemia caput Naupliades <strong>noctis</strong> nulli? Pestis fratremque acta; circuit
+Eueni virgine primus, sed cuspis, multa et remoratur fronti petunt? Elide
+Phrygum, fas dixit auras murum corpore quam alter thalamos ipsumque! Exsatiata
+pater quem famulos clarum licet igne deieci vacuaque equorum iuvenes partu
+Eumenidum. Collis et scire pericula anima.</p>
+    <nav id="page-controls">
+      <a href="#content" id="return-top">
+        <i class="fa fa-arrow-up" alt="⇧"></i> Return to top
+      </a>
+    </nav>
+  </main>
+  </content>
+  <footer id="footer">
+    
+
+<p>Compiled from markdown using <a href="https://www.mkdocs.org/">MkDocs</a>. Theme is <a href="https://teparsons.github.io/mkdocs-landing/">Landing</a> by <a href="https://toddparsons.co.uk">Todd Parsons</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="../search/main.js"></script>
+
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+site_name: Agents?
+nav:
+  - Home: index.md
+  - About: about.md
+  - Essays: essays.md
+  - Musings: musings.md
+theme: landing
